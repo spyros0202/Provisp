@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home | Provisp{% endblock %}
+{% block content %}
+<div class="text-center mb-4">
+  <h1 class="fw-bold text-success">Welcome to Provisp</h1>
+  <p class="lead text-muted">AI-powered insights for smarter sheep farming.</p>
+</div>
+
+<div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm border" style="max-height: 500px;">
+  <iframe src="{% static 'farms_map.html' %}"
+          title="Farms Map"
+          style="border: none;">
+  </iframe>
+</div>
+{% endblock %}

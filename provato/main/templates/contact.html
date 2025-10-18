@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Contact | Provisp{% endblock %}
+{% block content %}
+<div class="text-center">
+  <h1 class="fw-bold text-success mb-4">Get in Touch</h1>
+  <p class="lead text-muted mb-5">
+    We'd love to hear from you. Whether you have questions or want to collaborate, reach out anytime.
+  </p>
+
+  <div class="card mx-auto shadow-sm" style="max-width: 500px;">
+    <div class="card-body">
+      <h5 class="card-title text-success">Contact Information</h5>
+      <p class="card-text text-muted">
+        📧 <a href="mailto:bme20388006@uniwa.gr">spyros0202@gmail.com</a><br>📍 Athens, Greece
+      </p>
+      <hr>
+
+      <form method="POST" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Enter name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" name="message" rows="4" placeholder="Write your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Send Message</button>
+      </form>
+
+      {% if success %}
+      <div class="alert alert-success mt-3" role="alert">
+        ✅ Your message has been sent successfully!
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

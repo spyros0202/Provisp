@@ -1,0 +1,76 @@
+.navbar {
+    background: linear-gradient(90deg, #198754, #28a745);
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.2s ease;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Chat Widget Styles */
+#chat-widget {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1050;
+}
+
+#chat-messages {
+    overflow-y: auto;
+    flex: 1;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-message.assistant {
+    text-align: left;
+}
+
+/* Ensure chat window is properly styled */
+#chat-window {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: 1px solid #dee2e6;
+}
+
+#chat-window[hidden] {
+    display: none !important;
+}

@@ -35,10 +35,16 @@ def call_llm(question: str, context_text: str, history=None) -> Dict[str, str]:
     history_block = "\n".join(f"{m['role']}: {m['content']}" for m in (history or [])[-8:])
     prompt = (
         f"System: {SYSTEM_PROMPT}\n\n"
+        f"You must answer **only** using the provided Neo4j context. "
+        f"If the answer is not explicitly present there, respond exactly: "
+        f"'I do not have enough information in the database.' "
+        f"Do not use general knowledge or assumptions.\n\n"
         f"Context (from Neo4j):\n{context_text or '(none)'}\n\n"
         f"Conversation so far:\n{history_block}\n\n"
-        f"User question:\n{question}\n\nAnswer (use only context):"
+        f"User question:\n{question}\n\n"
+        f"Answer:"
     )
+
     answer = _openai_generate(prompt)
     return {"answer": answer, "source": "openai"}
 

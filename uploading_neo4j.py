@@ -2,11 +2,10 @@ import csv
 from neo4j import GraphDatabase
 import os
 
-# Neo4j Aura credentials
-NEO4J_URI = "neo4j+ssc://53ed6a0b.databases.neo4j.io"
-NEO4J_USER = "neo4j"
-NEO4J_PASS = "mhQSBj1ag6uEzaiStP66bRktDi_GluXp_pFR9gTxLTg"
-NEO4J_DATABASE = "neo4j"
+NEO4J_URI = os.getenv("NEO4J_URI", "neo4j+ssc://53ed6a0b.databases.neo4j.io")
+NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASS = os.getenv("NEO4J_PASS", "")
+NEO4J_DATABASE = os.getenv("NEO4J_DATABASE", "neo4j")
 
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASS))
 

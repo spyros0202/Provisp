@@ -12,8 +12,8 @@ files = {'farm1_metrics.csv','farm2_metrics.csv','farm4_metrics.csv','farm6_metr
 % ------------------------------------------------------------
 % 1) Setiings
 % ------------------------------------------------------------
-temp_fever_thr   = 40.0;   % °C πυρετός
-lowmove_z_thr    = -1.0;   % z_acc < -1 σημαίνει χαμηλή κίνηση
+temp_fever_thr   = 40.0;   % temp
+lowmove_z_thr    = -1.0;   % 
 recov_days_norm  = 3;
 mortality_frac   = 0.03;
 days_to_outcome  = 7;
@@ -155,6 +155,7 @@ for t=2:T
     D(t)=D(t-1)+die_term;
 end
 end
+
 
 
 

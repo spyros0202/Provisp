@@ -1,7 +1,7 @@
 # 🐑 Provato — Smart Farm Knowledge Assistant
 
 Provato is an intelligent **farm management and query system** that connects **Neo4j graph databases** of farms, animals, and sensors with an **LLM-powered natural language interface**.  
-It enables farmers, veterinarians, and agronomists to ask **free-form questions** (in English or Greek) and receive grounded answers directly from their farm data.
+It enables farmers, veterinarians, and agronomists to ask **free-form questions** (in English or Greek) and receive grounded answers directly from their farm data.Also this repo includes some Matlab Scripts (.m) that are describing SIRD epidemiological models , some ML simulations and  Python (.py) scripts for data processing procedures .
 
 ---
 

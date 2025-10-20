@@ -5,7 +5,7 @@ clc; clear; close all;
 fprintf('--- SIRD Mastitis: Baseline vs Early Detection ---\n');
 
 % ------------------------------------------------------------
-% 0) Αρχεία CSV
+% 0)  CSVs
 % ------------------------------------------------------------
 files = {'farm1_metrics.csv','farm2_metrics.csv','farm4_metrics.csv','farm6_metrics.csv'};
 
@@ -155,6 +155,7 @@ for t=2:T
     D(t)=D(t-1)+die_term;
 end
 end
+
 
 
 
